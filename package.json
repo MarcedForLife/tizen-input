@@ -1,0 +1,10 @@
+{
+  "name": "tizen-input",
+  "private": true,
+  "scripts": {
+    "test": "node tests/app.test.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.0"
+  }
+}

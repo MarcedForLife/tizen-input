@@ -1,0 +1,11 @@
+html, body { margin: 0; background: transparent; color: #f4f5f8; font: 24px sans-serif; }
+main { margin: 32px; padding: 28px; max-width: 1180px; background: rgba(16, 20, 29, 0.94); border-radius: 12px; }
+h1 { margin: 0 0 12px; font-size: 40px; }
+p { line-height: 1.4; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 24px; margin: 16px 0; }
+dt { color: #9aa6bd; }
+dd { margin: 0; color: #a9d9ff; }
+button { margin: 6px; padding: 14px 20px; border: 3px solid #6c7890; border-radius: 6px; background: #202b3d; color: inherit; font: inherit; }
+button:focus { outline: 4px solid #a9d9ff; border-color: #fff; background: #334e72; }
+button:disabled { opacity: 0.45; }
+#log { height: 230px; overflow-y: auto; white-space: pre-wrap; overflow-wrap: break-word; font: 19px monospace; }

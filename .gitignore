@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+
+# Tizen build output and signing material
+dist/
+*.wgt
+*.p12
+profiles.xml
+.buildResult/
+author-signature.xml
+signature*.xml
+.manifest.tmp

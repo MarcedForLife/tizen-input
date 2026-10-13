@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
+        id="https://github.com/MarcedForLife/tizen-input" version="0.1.0" viewmodes="maximized">
+    <tizen:application id="TizenInput.TizenInput" package="TizenInput" required_version="2.3"/>
+    <content src="index.html"/>
+    <name>Tizen Input</name>
+    <tizen:profile name="tv-samsung"/>
+    <tizen:privilege name="http://tizen.org/privilege/tv.window"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <access origin="ws://127.0.0.1:8001"/>
+    <tizen:setting screen-orientation="landscape" context-menu="disable"
+                   background-support="enable" encryption="disable" install-location="auto"
+                   hwkey-event="enable"/>
+</widget>

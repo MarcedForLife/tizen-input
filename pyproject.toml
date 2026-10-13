@@ -1,0 +1,14 @@
+[project]
+name = "tizen-input"
+version = "0.1.0"
+description = "Switch Samsung Tizen display inputs locally from Home Assistant"
+requires-python = ">=3.13"
+
+[dependency-groups]
+dev = ["aiohttp>=3.11", "pytest>=8"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

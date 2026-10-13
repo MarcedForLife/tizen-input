@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1920">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; connect-src ws://127.0.0.1:8001">
+    <title>Tizen Input</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sources.js" defer></script>
+    <script src="channel.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Tizen Input</h1>
+        <p>Home Assistant switches this display's input through this app, which keeps running in the background.</p>
+        <dl>
+            <dt>Channel</dt>
+            <dd id="channel" role="status">Starting</dd>
+            <dt>Input</dt>
+            <dd id="input" role="status">Unknown</dd>
+        </dl>
+        <div id="sources" aria-label="Inputs"></div>
+        <nav aria-label="Actions">
+            <button id="refresh">Refresh inputs</button>
+            <button id="hide">Hide</button>
+            <button id="exit">Exit</button>
+        </nav>
+        <p>Arrow keys move focus and Enter selects. Return hides the app. Exiting stops Home Assistant control until the next selection relaunches it.</p>
+        <pre id="log" aria-label="Log"></pre>
+    </main>
+</body>
+</html>

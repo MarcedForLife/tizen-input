@@ -1,0 +1,74 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "The Tizen Input app must be installed on the display.",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "IP address or hostname of the Samsung display."
+        }
+      },
+      "pair": {
+        "title": "Pair for power control",
+        "description": "Turn the display on, then submit and select Allow on the display within 30 seconds. This lets Home Assistant turn the display on and off.",
+        "data": {
+          "skip_pairing": "Skip for now"
+        },
+        "data_description": {
+          "skip_pairing": "Add the display without power control and pair it later from Reconfigure. Cycle then only switches inputs."
+        }
+      },
+      "reconfigure": {
+        "title": "Pair for power control",
+        "description": "Turn {name} on, then submit and select Allow on the display within 30 seconds. This lets Home Assistant turn the display on and off."
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the display's local API on port 8001.",
+      "not_tizen": "The device at this address isn't a Tizen display.",
+      "pairing_denied": "The display denied access. Allow Home Assistant in the display's device connection settings and try again.",
+      "pairing_timeout": "The display's prompt wasn't accepted in time. Check the display is on and try again.",
+      "pairing_cannot_connect": "Failed to connect to the display's remote control on port 8002.",
+      "unknown": "Unexpected error while pairing."
+    },
+    "abort": {
+      "already_configured": "This display is already configured.",
+      "reconfigure_successful": "The display is paired for power control."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cycle defaults",
+        "description": "A Cycle press uses these only when no input has a signal.",
+        "data": {
+          "default_entity": "Default entity",
+          "default_input": "Default input"
+        },
+        "data_description": {
+          "default_entity": "Buttons are pressed and other entities turned on, such as a switch that wakes a computer.",
+          "default_input": "Selected after the default entity runs."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "signal": {
+        "name": "{input} signal"
+      }
+    },
+    "button": {
+      "cycle": {
+        "name": "Cycle"
+      }
+    }
+  },
+  "exceptions": {
+    "cycle_failed": {
+      "message": "Couldn't cycle the display's input: {error}"
+    }
+  }
+}
